@@ -505,3 +505,13 @@ ActionController::RoutingError (No route matches [GET] "/system/authors/avatars/
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (48.5ms)
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE (avatar_file_name IS NOT NULL)  ORDER BY "authors"."id" ASC LIMIT 1000[0m
+Command :: file -b --mime '/tmp/ba90478aa9eb532faee6a30d28219ba320171027-19962-1njfx41.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/ba90478aa9eb532faee6a30d28219ba320171027-19962-1hdqako.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/ba90478aa9eb532faee6a30d28219ba320171027-19962-1hdqako.png[0]'
+Command :: convert '/tmp/ba90478aa9eb532faee6a30d28219ba320171027-19962-1hdqako.png[0]' -auto-orient -resize "100x100>" '/tmp/df0a3a4915af62b9151ad241e2a09ee820171027-19962-wgeinh'
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "authors" SET "avatar_updated_at" = ?, "avatar_file_name" = ?, "updated_at" = ? WHERE "authors"."id" = ?[0m  [["avatar_updated_at", "2017-10-27 19:11:01.205598"], ["avatar_file_name", "1492440073925.png"], ["updated_at", "2017-10-27 19:11:01.580344"], ["id", 8]]
+  [1m[35m (2.7ms)[0m  commit transaction
+Command :: file -b --mime '/tmp/5f3a1f4c0e67818bb294c1a0f0aea15120171027-19962-1ikzmdz.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/5f3a1f4c0e67818bb294c1a0f0aea15120171027-19962-14we786.jpg[0]' 2>/dev/null
