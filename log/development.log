@@ -409,3 +409,13 @@ Command :: file -b --mime '/tmp/5f3a1f4c0e67818bb294c1a0f0aea15120171027-19368-1
   [1m[35m (4.5ms)[0m  commit transaction
 Redirected to http://165.227.81.218:58497/authors/9
 Completed 302 Found in 35ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/authors/9" for 98.208.214.75 at 2017-10-27 19:06:32 +0000
+Cannot render console from 98.208.214.75! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mAuthor Load (0.9ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", 9]]
+  Rendered authors/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 1.0ms)
