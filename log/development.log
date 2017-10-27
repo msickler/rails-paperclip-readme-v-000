@@ -515,3 +515,8 @@ Command :: convert '/tmp/ba90478aa9eb532faee6a30d28219ba320171027-19962-1hdqako.
   [1m[35m (2.7ms)[0m  commit transaction
 Command :: file -b --mime '/tmp/5f3a1f4c0e67818bb294c1a0f0aea15120171027-19962-1ikzmdz.jpg'
 Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/5f3a1f4c0e67818bb294c1a0f0aea15120171027-19962-14we786.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/5f3a1f4c0e67818bb294c1a0f0aea15120171027-19962-14we786.jpg[0]'
+Command :: convert '/tmp/5f3a1f4c0e67818bb294c1a0f0aea15120171027-19962-14we786.jpg[0]' -auto-orient -resize "100x100>" '/tmp/5ea6a48c60102d1d8ba17f53c552afdb20171027-19962-1607yey'
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "authors" SET "avatar_updated_at" = ?, "avatar_file_name" = ?, "updated_at" = ? WHERE "authors"."id" = ?  [["avatar_updated_at", "2017-10-27 19:11:01.602820"], ["avatar_file_name", "C7fididW4AEekOV.jpg"], ["updated_at", "2017-10-27 19:11:01.927370"], ["id", 9]]
+  [1m[36m (6.9ms)[0m  [1mcommit transaction[0m
