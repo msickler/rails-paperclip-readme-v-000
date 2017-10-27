@@ -396,3 +396,16 @@ Processing by AuthorsController#show as HTML
   [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 8]]
   Rendered authors/show.html.erb within layouts/application (21.5ms)
 Completed 200 OK in 43ms (Views: 33.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/authors" for 98.208.214.75 at 2017-10-27 19:06:32 +0000
+Cannot render console from 98.208.214.75! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OxQmHWB1s1N+S0oW3NNuMOKCY4LqKeAQfktLcvo2rlnDZuS2oeWSsJmDU1AELXq+1gA3cC5fy9FgMLWTlNT+Ig==", "author"=>{"avatar"=>#<ActionDispatch::Http::UploadedFile:0x007fd748134df0 @tempfile=#<Tempfile:/tmp/RackMultipart20171027-19368-17kmtnn.jpg>, @original_filename="C7fididW4AEekOV.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"author[avatar]\"; filename=\"C7fididW4AEekOV.jpg\"\r\nContent-Type: image/jpeg\r\n">, "name"=>"erer", "bio"=>"werwer"}, "commit"=>"Create Author"}
+Command :: file -b --mime '/tmp/5f3a1f4c0e67818bb294c1a0f0aea15120171027-19368-cmhzef.jpg'
+  [1m[35m (0.1ms)[0m  begin transaction
+Command :: file -b --mime '/tmp/5f3a1f4c0e67818bb294c1a0f0aea15120171027-19368-1l3urph.jpg'
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "authors" ("bio", "name", "avatar_file_name", "avatar_content_type", "avatar_file_size", "avatar_updated_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["bio", "werwer"], ["name", "erer"], ["avatar_file_name", "C7fididW4AEekOV.jpg"], ["avatar_content_type", "image/jpeg"], ["avatar_file_size", 138424], ["avatar_updated_at", "2017-10-27 19:06:32.472674"], ["created_at", "2017-10-27 19:06:32.484962"], ["updated_at", "2017-10-27 19:06:32.484962"]]
+  [1m[35m (4.5ms)[0m  commit transaction
+Redirected to http://165.227.81.218:58497/authors/9
+Completed 302 Found in 35ms (ActiveRecord: 4.8ms)
